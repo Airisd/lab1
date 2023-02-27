@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import React from "react";
 import s from "./Post.module.css";
 
@@ -12,6 +12,11 @@ const Post = (props) => {
       </div>
     </div>
   );
+};
+
+Post.propTypes = {
+  likesCount: PropTypes.number,
+  message: PropTypes.string.isRequired
 };
 
 export default Post;
